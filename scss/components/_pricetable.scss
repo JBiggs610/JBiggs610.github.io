@@ -1,0 +1,249 @@
+// PRICING TABLE
+.pricingtable-inner {
+    text-align: center;
+}
+.pricingtable-features {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+		padding: 12px;
+		i{
+			margin: 0 3px;
+		}
+	}
+	
+}
+.no-col-gap .pricingtable-wrapper {
+    margin-left: -1px;
+}
+
+// Table =======
+.table-option{
+	border: 2px solid #adadad;
+	border-radius: 6px;
+	padding:50px 0px 30px 0;
+	
+	.pricingtable-footer{
+		border:0;
+		background-color: transparent;
+	}
+	.pricingtable-features{
+		border:0;
+		background-color: transparent;
+		li{
+			border:0;
+			background-color: transparent;
+			color:#919191;
+			font-size:18px;
+		}
+	}
+	.pricingtable-title{
+		border:0;
+		background-color: transparent;
+		padding: 0;
+		
+		*{
+			color:#000;
+		}
+		h2{
+			font-size: 28px;
+			line-height: 36px;
+		}
+	}
+	.pricingtable-price{
+		padding: 0;
+		border:0;
+		background-color: transparent;
+	}
+	.pricingtable-bx {
+		color: #000;
+		font-size: 63px;
+		font-weight: 800;
+		
+		strong, sup{
+			font-size: 30px;
+			font-weight: 700;
+		}
+	}
+	&:hover,
+	&.active{
+		background-color:#eeeeee;
+		border: 2px solid #eeeeee;
+	}
+	&.dark{
+		@include transitionMedium;
+		
+		&:hover, 
+		&.active {
+			background-color: #404040;
+			border: 2px solid #404040;
+			box-shadow: 0 0 10px 5px rgba(0,0,0,0.3);
+			transition: all 0.5s;
+			.pricingtable-features li,
+			.pricingtable-title h2,
+			.pricingtable-price .pricingtable-bx{
+				color: #fff;
+				@include transitionMedium;
+			}
+			.pricingtable-footer .btn.black{
+				background-color: #fff;
+				border-color: rgba(0,0,0,0);
+				color: #000;
+			}
+		}
+	}
+}
+
+// pricingtable-toggle
+.pricingtable-toggle{
+	display: flex;
+    margin: auto;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 10px;
+	span{
+	    font-size: 18px;
+		margin-top: 5px;
+		font-weight: 500;
+	}
+	.custom-control-label{
+		margin: 0 35px 0 50px;
+	}
+}
+
+
+// Pricing Table
+.pricingtable-wrapper{
+	box-shadow: 1px 0 50px rgba(0, 0, 0, 0.1);
+	border-radius: var(--border-radius-base)!important;
+	overflow: hidden;
+	@include transitionMedium;
+	background-color: $white;
+	
+	&.style-1{
+		padding: 40px 60px;
+		position:relative;
+		z-index:1;
+		height: 100%;
+		
+		.pricingtable-title{
+		    margin-bottom: 15px;
+			@include transitionMedium;
+			.title{
+				@include transitionMedium;
+				font-weight: 600;
+				background-color: #fff;
+				display: inline-block;
+				padding: 8px 30px;
+				border-radius: 0 0 var(--border-radius-base) var(--border-radius-base);
+			}
+		}
+		.pricingtable-bx{
+			@include transitionMedium;
+			color: var(--primary);
+			margin: 0;
+			font-size: 45px;
+			small{
+				font-size: 15px;
+				color: $secondary;
+				font-weight: 600;
+			}
+		}
+		.pricingtable-footer{
+			margin-top: auto;
+		}
+		.text{
+			margin-bottom: 10px;
+		}
+		.pricingtable-price{
+			margin-bottom: 15px;
+		}
+		.pricingtable-inner{
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+		}
+		.pricingtable-head{
+		    height: 200px;
+			margin: -40px -60px 15px;
+			text-align: center;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			position: relative;
+			
+			&:after{
+				content: "";
+				background-image: url(../images/table/shape1.png);
+				background-repeat: no-repeat;
+				background-position: bottom left;
+				background-size: 100%;
+				position: absolute;
+				left: 0;
+				bottom: -1px;
+				height: 100%;
+				width: 100%;
+			}
+			@include respond('tab-land'){
+				margin: -35px -35px 15px;
+			}
+		}
+		.pricingtable-features{
+			padding: 15px 0;
+			text-align: left;
+			@include transitionMedium;
+			li {
+				padding: 1px 0 1px 40px;
+				font-size: 15px;
+				position: relative;
+				margin-bottom: 10px;
+				
+				
+				&:after{
+					content: "\f00c";
+					font-family: "Font Awesome 5 Free";
+					font-size: 11px;
+					width: 25px;
+					height: 25px;
+					background: #fff;
+					display: block;
+					position: absolute;
+					left: 0;
+					color: var(--primary);
+					text-align: center;
+					top: 0;
+					line-height: 23px;
+					@include transitionMedium;
+					border: 1px solid #e1e1e2;
+					font-weight: 900;
+				}
+				&:hover{
+					&:after{
+						background-color: var(--primary);
+						border-color: var(--primary);
+						color: #fff;
+					}
+				}
+			}
+		}
+		.btn{
+			@include transitionMedium;
+			font-weight: 600;
+			padding: 18px 45px;
+		}
+		
+		&:hover,
+		&.active{
+			.pricingtable-title{
+				.title{
+					background-color: var(--primary);
+					color: #fff;
+				}
+			}
+		}
+		@include respond('tab-land'){
+			padding: 35px;
+		}
+	}	
+}

@@ -1,0 +1,66 @@
+.dlab-team{
+	// Style 1
+	&.style-1{	
+		text-align:center;
+		.dlab-media{
+			height:335px;
+			border-radius:20px;
+			overflow:hidden;
+			margin-bottom:20px;
+			position:relative;
+			img{
+				height:100%;
+				width:100%;
+				object-fit:cover;
+				object-position: top;
+				@include transitionFast;
+			}
+			.overlay-bx{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color:rgba(0,0,0,0.5);
+				.social-list{
+					transform:scale(0);
+					@include transitionMedium;
+				}
+			}
+		}
+		&:hover{
+			.dlab-media{
+				img{
+					transform:scale(1.1);
+				}
+				.overlay-bx{
+					opacity:1;
+					visibility:visible;
+					.social-list{
+						transform:scale(1);
+					}
+				}
+			}
+		}
+	}
+}
+
+
+//team-slider
+.team-slider{
+	@include respond ('tab-port'){
+		overflow:hidden;
+		.row{
+			flex-wrap:nowrap;
+		}
+		.swiper-slide{
+			width:360px;
+		}
+	}
+	@include respond ('phone'){
+		.swiper-slide{
+			width:300px;
+		}
+		.dlab-team.style-1{
+			margin-bottom:0;
+		}
+	}
+}

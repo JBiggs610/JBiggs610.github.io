@@ -1,0 +1,162 @@
+.portfolio-area1{
+    &:after {
+		content: "";
+		height: 40%;
+		position: absolute;
+		bottom: 0;
+		z-index: -1;
+		left: 0;
+		width: 100%;
+		background: #fff;
+	}
+}
+.dlab-box.style-1{
+	@include transitionMedium;
+	overflow: hidden;
+	
+	.dlab-media{
+		img{
+			@include respond('phone-land'){
+				min-height: 350px;
+			}
+		}
+	}
+	
+	.dlab-info{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		padding: 30px;
+		background: rgba(33,37,41,0);
+		@include transitionMedium;
+	}
+	.sub-title{
+		writing-mode: tb-rl;
+		float: right;
+		margin: 0;
+		color: #fff;
+		background: var(--primary);
+		font-weight: 300;
+		position: absolute;
+		top: 0;
+		padding: 40px 25px;
+		right: 0;
+		
+		@include transitionMedium;
+		a{
+			color:inherit;	
+		}
+		@include respond('tab-land'){
+			padding: 20px 12px;
+			font-size: 15px;
+		}
+	}
+	.title{
+		margin: 0;
+		font-size:2.5rem;
+		@include transitionMedium;
+		span{
+			display:block;
+		}
+	}
+	.port-info{
+		position:absolute;
+		bottom:0;
+		left:0;
+		background:rgba(255,255,255,0.9);
+		padding:60px;
+		@include respond('tab-land'){
+			padding:30px;
+			.dlab-meta {
+				margin-bottom: 5px;
+				ul li{
+					font-size: 15px;
+				}
+			}	
+			h2.title{
+				font-size:2rem;
+			}
+		}
+		@include respond('phone-land'){
+			h2.title{
+				font-size:1.325rem;
+			}
+		}
+	}
+	.dlab-meta{
+		ul{
+			li{
+				color:var(--primary);
+				font-size: 18px;
+				padding-left: 15px;
+				position: relative;
+				
+				&:after {
+					content: "";
+					height: 8px;
+					width: 8px;
+					background: var(--primary);
+					position: absolute;
+					border-radius: 4px;
+					left: 0;
+					top: 50%;
+					margin-top: -4px;
+				}
+			}
+		}
+	}
+	.view-btn{
+		width: 75px;
+		height: 75px;
+		position: absolute;
+		top: 30px;
+		left: 30px;
+		border-radius: var(--border-radius-base);
+		z-index: 1;
+		transition: background 0.5s ease;
+		-moz-transition: background 0.5s ease;
+		-webkit-transition: background 0.5s ease;
+		-ms-transition: background 0.5s ease;
+		-o-transition: background 0.5s ease;
+		transition-delay: 0.5s;
+		-moz-transition-delay: 0.5s;
+		-ms-transition-delay: 0.5s;
+		-o-transition-delay: 0.5s;
+		-webkit-transition-delay: 0.5s;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&:after{
+			content:"\f00e";
+			@include transitionMedium;
+			opacity:0;
+			font-family: 'Line Awesome Free';
+			font-weight: 900;
+			color: #fff;
+			font-size: 35px;
+			display: inline-block;
+			transform: scale(2);
+			-moz-transform: scale(2);
+			-webkit-transform: scale(2);
+			-ms-transform: scale(2);
+			-o-transform: scale(2);
+		}
+	}
+	&:hover{
+		.view-btn{
+			background: var(--primary);
+			//transition: background 0.8s ease;
+			transition-delay: 0s;
+			&:after{
+				opacity:1;
+				transform: scale(1);
+				-moz-transform: scale(1);
+				-webkit-transform: scale(1);
+				-ms-transform: scale(1);
+				-o-transform: scale(1);
+			}
+		}
+	}
+}

@@ -1,0 +1,20 @@
+.dlab-team{
+	transition: all 0.5s;
+	.dlab-name{
+		a{
+			transition: all 0.5s;
+		}
+	}
+	.dlab-content{
+		transition: all 0.5s;
+		position: relative;
+	}
+	.dlab-media{
+		img{
+			width: 100%;
+		}
+	}
+	.dlab-position{
+		display: block;
+	}
+}

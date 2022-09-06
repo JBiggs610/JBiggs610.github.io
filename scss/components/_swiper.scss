@@ -1,0 +1,60 @@
+.btn-next, 
+.btn-prev{
+	box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05);
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    width: 50px;
+    height: 50px;
+    color: var(--primary);
+    background: var(--rgba-primary-1);
+    font-size: 15px;
+    letter-spacing: 2px;
+    z-index: 1;
+    text-align: center;
+    line-height: 50px;
+    border-radius: var(--border-radius-base);
+    margin: 0 10px;
+	display: inline-block;
+	@include transitionMedium;
+	@include respond('phone-land'){
+		width: 45px;
+		height: 45px;
+		line-height: 45px;
+	}
+	&:hover{
+		background:var(--primary);
+		color:#fff;
+	}
+	&:after{
+		content:none;	
+	}
+	i{
+		font-size: 30px;
+		line-height: inherit;
+		@include respond('phone-land'){
+			font-size: 24px;
+		}
+	}
+}
+
+.swiper-btn-lr{
+	.btn-next, 
+	.btn-prev{
+		position:absolute;
+		top:50%;
+		margin:0;
+		border-radius:0;
+		transform:translateY(-50%);
+		background:rgba(0,0,0,0.5);
+		color:#fff;
+	}
+	.btn-next{
+		right:1px;
+	}
+	.btn-prev{
+		left:1px;
+	}
+}

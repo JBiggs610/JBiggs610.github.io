@@ -1,0 +1,102 @@
+.dlab-card{
+	&.style-1{
+	    overflow: hidden;
+		border-radius: var(--border-radius-base);
+		
+		.dlab-media{
+			img{
+				border-radius:var(--border-radius-base);
+			}
+		}
+		.dlab-info{
+			padding: 35px 30px 20px;
+			@include respond('phone'){
+				padding: 25px 25px 20px;
+			}
+		}
+		.dlab-title{
+			margin-bottom: 12px;
+		}
+		p{
+		    font-size: 16px;
+			margin-bottom: 20px;
+		}
+		.dlab-meta{	
+			margin-bottom: 10px;
+			ul li {
+				margin-right: 0;
+			}
+		}
+		&.blog-lg{
+			.dlab-info{
+				padding: 40px 35px 30px;
+			}
+			@include respond ('phone-land'){
+				.dlab-info {
+					padding: 35px 30px 20px;
+				}
+			}
+		}
+		&.shadow{
+			box-shadow: 0 0 60px 20px rgba(0, 0, 0, 0.10)!important;
+			.dlab-media{
+				img{
+					border-radius: 0;
+				}
+			}
+			.btn{
+				margin-bottom: 10px;
+			}
+		}
+		&.blog-half{
+			.dlab-meta {
+				position: unset!important;
+			}
+		}
+		&.text-white .dlab-title a{
+			color: #fff;
+			&:hover{
+				color:var(--primary);
+			}
+		}
+		.dlab-meta {
+			ul {
+				li {
+					display: inline;
+					font-weight: 500;
+					position: relative;
+					padding-right: 20px;
+					span {
+						color: #888;
+						white-space: nowrap;
+						font-size: 12px;
+						text-transform: uppercase;
+						font-family: var(--font-family-title);
+						padding: 0 15px 0px 0px;
+						letter-spacing: 1px;
+						font-weight: 400;
+						&:after {
+							content: "";
+							position: absolute;
+							width: 8px;
+							height: 2px;
+							background: var(--primary);
+							top: 9px;
+							right: 13px;
+						}
+					}
+					a {
+						color: #888;
+						white-space: nowrap;
+						font-size: 12px;
+						text-transform: uppercase;
+						font-family: var(--font-family-title);
+						padding: 0 10px 0px 0px;
+						letter-spacing: 1px;
+						font-weight: 400;
+					}
+				}
+			}
+		}
+	}
+}

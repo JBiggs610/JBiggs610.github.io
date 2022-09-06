@@ -1,0 +1,53 @@
+.about-bx1{
+	.dlab-media{
+		width:50vw;
+		float:right;
+		border-radius:0 100px 100px 0;
+		overflow:hidden;
+		margin-right:50px;
+		height:100%;
+		img{
+			width:100%;
+			height:100%;
+			object-fit:cover;
+		}
+	}
+	.about-swiper{
+		margin-left:-350px;
+		margin-right: -18px;
+		.icon-bx-wraper.style-1{
+			margin: 45px 18px;
+		}
+	}
+	@include respond ('tab-land'){
+		.dlab-media{
+			margin-right:40px;
+		}
+		.about-swiper{
+			margin-left:-200px;
+		}
+	}
+	@include respond ('tab-port'){
+		.dlab-media{
+			width:100%;
+			border-radius:50px;
+			margin-right:0;
+			height: auto;
+			margin-bottom: 40px;
+		}
+		.about-swiper{
+			margin-left:-18px;
+		}
+	}
+	@include respond ('phone'){
+		.dlab-media{
+			border-radius:30px;
+		}
+		.about-swiper{
+			.icon-bx-wraper.style-1{
+				margin: 32px 18px;
+			}
+		}
+	}
+	
+}

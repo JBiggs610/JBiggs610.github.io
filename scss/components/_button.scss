@@ -1,0 +1,240 @@
+// button
+button:hover,
+button:active,
+button:focus {
+    outline: 0;
+}
+.btn{
+	padding: 12px 20px;
+    display: inline-flex;
+	border-radius: var(--border-radius-base);
+    font-size: 16px;
+    font-weight: 500;
+	position: relative;
+	line-height: 1.5;
+	box-shadow: 0 5px 15px -10px var(--primary);
+	align-items: center;
+	overflow:hidden;
+	// btn lg
+	&.btn-lg{
+		padding: 20px 30px;
+		font-size: 16px;
+		@include respond ('tab-land'){
+			padding:18px 25px;
+		}
+	}
+	// btn md
+	&.btn-md{
+		padding: 15px 30px;
+		font-size: 16px;
+	}
+	// btn sm
+	&.btn-sm{
+		font-size: 14px;
+		padding: 8px 15px;
+	}
+	// btn xs
+	&.btn-xs{
+		font-size: 14px;
+		padding: 11px 25px;
+	}
+	@include respond ('phone-land'){
+		padding: 14px 25px;
+		font-size: 14px;
+	}
+	&.btn-primary{
+		color:$white;
+		&:hover{
+			color:$white;
+		}
+	}
+	i{
+		font-size: 24px;
+		line-height: 1;
+		
+	}
+	
+	&.btn-white{
+		background-color:#fff;
+		color:var(--primary);
+		font-weight:600;
+	}
+	&.btn-outline-white{
+		color:#fff;
+		border:1px solid #fff;
+	}
+
+	&.effect-1{
+		z-index:1;
+		&:before{
+			content: '';
+			background: #fff;
+			position:absolute;
+			width: 120%;
+			height: 0;
+			padding-bottom: 120%;
+			top: -110%;
+			left: -10%;
+			border-radius: 50%;
+			transform: translate3d(0,68%,0) scale3d(0,0,0);
+		}
+		&:after{
+			position:absolute;
+			content: '';
+			height:100%;
+			width:100%;
+			top:0;
+			left:0;
+			background: #fff;
+			transform: translate3d(0,-100%,0);
+			transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+		}
+		span{
+			display:block;
+			position:relative;
+			z-index:2;
+		}
+		&:hover{
+			&:before{
+				transform: translate3d(0,0,0) scale3d(1,1,1);
+				transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+			}
+			&:after{
+				transform: translate3d(0,0,0);
+				transition-duration: 0.05s;
+				transition-delay: 0.4s;
+				transition-timing-function: linear;
+			}
+			span{
+				animation: MoveScaleUpInitial 0.3s forwards, MoveScaleUpEnd 0.3s forwards 0.3s;
+				color:var(--primary);
+			}
+		}
+	}
+}
+.btn-primary{
+	&.light{
+		background-color:var(--rgba-primary-1);
+		border-color:var(--rgba-primary-1);
+		color:var(--primary);
+		&.effect-1{
+			&:after{
+				background-color:var(--primary);
+			}
+			&:before{
+				background-color:var(--primary);
+			}
+			&:hover{
+				background-color:var(--rgba-primary-1);
+				border-color:var(--rgba-primary-1);
+				color:#fff;
+				span{
+					color:#fff;
+				}
+			}
+		}
+	}
+}
+@keyframes MoveScaleUpInitial {
+	to {
+		transform: translate3d(0,-105%,0) scale3d(1,2,1);
+		opacity: 0;
+	}
+}
+
+@keyframes MoveScaleUpEnd {
+	from {
+		transform: translate3d(0,100%,0) scale3d(1,2,1);
+		opacity: 0;
+	}
+	to {
+		transform: translate3d(0,0,0);
+		opacity: 1;
+	}
+}
+
+
+.btn-lg{
+	i{
+		font-size:24px;
+	}
+}
+.btn-primary{
+	border-color:var(--primary);	
+	background-color:var(--primary);
+	&.disabled,
+	&:disabled,
+	&:not(:disabled):not(.disabled).active, 
+	&:not(:disabled):not(.disabled):active, 
+	&:active,
+	&:focus,
+	&:hover{
+		border-color:var(--primary-hover);	
+		background-color:var(--primary-hover);	
+	}
+}
+.btn-link{
+	color:var(--primary);
+	text-decoration: none;
+	
+	&:hover{
+		color:var(--primary-hover);	
+	}
+}
+.btn-outline-primary {
+	color:var(--primary);	
+	border-color:var(--primary);
+	&.disabled,
+	&:disabled,
+	&:not(:disabled):not(.disabled).active, 
+	&:not(:disabled):not(.disabled):active, 
+	&:active,
+	&:focus,
+	&:hover{
+		border-color:var(--primary-hover);	
+		background-color:var(--primary-hover);	
+		color:$white;
+	}
+}
+.btn-link-lg{
+	font-weight: 600;
+	font-size: 18px;
+	i{
+		transform: scale(1.5);
+		margin-left: 20px;
+	}
+	&:hover{
+		text-decoration: unset;
+	}
+}
+.btn-light{
+	background-color: $white;
+	&:hover{
+		background-color: var(--primary);
+		color: $white!important;
+		border-color: transparent;
+	}
+	&.text-primary{
+		&:hover{
+			color: $white!important;
+		}
+	}
+}
+.wp-block-button{
+	margin-bottom:0.3125rem;
+}
+.is-style-squared .wp-block-button__link{
+	border-radius:0;
+}
+.wp-block-button__link{
+	@extend .btn;
+	@extend .btn-primary;
+	border-radius:60px;
+	
+	&:after{
+		content:none;
+	}
+}
+.is-style-outline .wp-block-button__link{
+	@extend .btn-outline-primary;
+}

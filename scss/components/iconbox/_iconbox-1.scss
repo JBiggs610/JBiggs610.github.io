@@ -1,0 +1,191 @@
+.icon-bx-wraper{
+	// Style 1
+	&.style-1{
+		font-size:16px;
+		background-color:#fff;
+		box-shadow: 0px 26px 40px rgba(38, 58, 126, 0.14);
+		border-radius: var(--border-radius-lg);
+		padding: 45px 40px;
+		@include transitionMedium;
+		svg{
+			path{
+				fill:var(--primary);
+			}
+			rect{
+				fill:var(--primary);
+			}
+		}
+		&.box-sm{
+			padding:25px 20px;
+		}
+		@include respond ('laptop'){
+			padding:40px 25px; 
+		}
+		@include respond ('phone'){
+			padding:30px 25px; 
+			box-shadow: 0px 0px 40px rgba(38, 58, 126, 0.14);
+		}
+	}
+	
+	&.hover-overlay-effect{
+		position:relative;
+		z-index:1;
+		overflow:hidden;
+		.effect{
+			position: absolute;
+			display: block;
+			width: 0;
+			height: 0;
+			border-radius: 50%;
+			transition: width .4s ease-in-out,height .4s ease-in-out;
+			-webkit-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			z-index: -1;
+		}
+		svg path,
+		.title{
+			@include transitionMedium;
+		}
+		&:hover{
+			color:#fff;
+			.text-effect-1 .char:after,
+			.text-effect-1 .char:before{
+				color:#fff;
+			}
+			.text-primary{
+				color:#fff!important;
+			}
+			.btn-outline-primary{
+				color: #fff;
+				border-color: #fff;
+			}
+			svg path,
+			svg rect{
+				fill:#fff;
+			}
+			.title{
+				color:#fff;
+			}
+			.effect{
+				width: 300%;
+				height: 1200px;
+			}
+		}
+	}
+	
+	// Style 2
+	&.style-2{
+		background-color:var(--rgba-primary-1);
+		margin-left: 25px;
+		border-radius:var(--border-radius-base);
+		.icon-bx-sm{
+			position: absolute;
+			top: 50%;
+			left: -25px;
+			transform: translateY(-50%);
+			display: inline-block;
+			height: 50px;
+			width: 50px;
+			min-width: 50px;
+			line-height: 50px;
+			text-align: center;
+			background-color: var(--primary);
+		}
+		.icon-content{
+			padding: 15px 40px;
+			font-weight: 600;
+			min-height: 85px;
+			display: flex;
+			align-items: center;
+			color:#595959;
+		}
+	}
+	
+	//Style 3
+	&.style-3{
+		background: rgb(247, 248, 250);
+		padding: 20px;
+		border: 1px dashed rgb(238, 238, 238);
+		border-radius: var(--border-radius-base);
+		.photo{
+			float:left;
+			width: 120px;
+			min-width: 120px;
+			border-radius:var(--border-radius-base);
+		}
+		.content-box{
+			padding-left: 140px;
+		}
+		.used-car-dl-info{
+			li{
+				display:inline-block;
+				color: #6d7075;
+				font-weight: 500;
+				font-size: 15px;
+				padding-right: 12px;
+				margin-right: 12px;
+				border-right: 1px solid #00000047;
+				&:last-child{
+					border-right:0;
+					padding-right:0;
+					margin-right:0;
+				}
+			}
+		}
+		@include respond ('tab-port'){
+			.photo{
+				width:80px;
+				min-width:80px;
+			}
+			.content-box{
+				padding-left:100px;
+			}
+			.used-car-dl-info{
+				li{
+					border-right:0;
+				}
+			}
+		}
+	}
+	
+	//Style 4
+	&.style-4{
+		padding: 40px 30px;
+		background-color:#fff;
+		@include transitionMedium;
+		.dlab-tilte{			
+			font-weight:500;
+		}
+		&.active{
+			background-color:var(--primary);
+			color:#fff;
+			.dlab-tilte{			
+				color:#fff;
+			}
+			svg path{
+				fill:#fff;
+			}
+		}
+	}
+	
+	//Style 5
+	&.style-5{
+		border-width: 1px;
+		border-style: solid;
+		border-color: #ebedf2;
+		&.active{
+			background-color:#fff;
+			.dlab-tilte {
+				color: #000;
+			}
+		}
+	}
+	
+	//Style-6
+	&.style-6{
+		box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+		border-radius:var(--border-radius-base);
+		padding: 40px 30px;
+	}
+	
+}

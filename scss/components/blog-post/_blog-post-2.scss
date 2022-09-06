@@ -1,0 +1,82 @@
+.dlab-card{
+	&.style-2{
+		.dlab-media{
+			img{
+				border-radius:var(--border-radius-base);
+			}
+		}
+		.dlab-info{
+			padding: 30px 25px 20px;
+		}
+		.dlab-meta{
+			ul li {
+				margin-right: 10px;
+			}
+		}
+		.post-date,
+		.post-author a{
+			background-color: var(--primary);
+			color: #fff;
+			font-size: 14px;
+			text-transform: uppercase;
+			font-family: var(--font-family-title);
+			padding: 8px 18px;
+		}
+		&.blog-half{
+			align-items: center;
+			
+			h2.dlab-title{
+				font-size: 42px;
+			}
+			.dlab-media{
+				max-width: 60%;
+				min-width: 60%;
+			}
+			.dlab-info{
+				padding: 0 70px 0 0;
+				p{
+					margin-bottom: 30px;
+				}
+			}
+			.dlab-media + .dlab-info{
+				padding: 0 0 0 70px;
+			}
+			@include respond ('tab-land'){
+				h2.dlab-title{
+					font-size: 36px;
+				}
+				.dlab-media{
+					max-width: 50%;
+					min-width: 50%;
+				}
+				.dlab-info{
+					padding: 0 30px 0 0;
+				}
+				.dlab-media + .dlab-info{
+					padding: 0 0 0 30px;
+				}
+			}
+			@include respond ('tab-port'){
+				display: block;
+				.dlab-media{
+					max-width: 100%;
+					min-width: 100%;
+				}
+				.dlab-info{
+					padding: 0 0 30px 0;
+				}
+				.dlab-media + .dlab-info{
+					padding: 30px 0 0 0;
+				}
+			}
+			@include respond ('phone'){
+				h2.dlab-title{
+					font-size: 32px;
+				}
+			}
+		}
+		&.text-white .dlab-title a{
+			color: #fff;
+		}
+	}
+}

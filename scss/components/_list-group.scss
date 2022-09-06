@@ -1,0 +1,99 @@
+.list-circle,
+.list-angle-double,
+.list-square,
+.list-square-check{
+	li{
+		position: relative;
+		padding: 6px 5px 6px 15px;
+		&:before{
+			position: absolute;
+			left: 0;
+			top: 4px;
+			font-family: "Font Awesome 5 Free";
+			font-weight: 900;
+		}
+	}
+	&.primary{
+		li{
+			&:before{
+				color: var(--primary);
+			}
+		}
+	}
+}
+.list-angle-double{
+	li{
+		padding-left: 25px;
+	}
+}
+ul{
+	&.list-circle{
+		li{
+			&:before{
+				content: "\f111";
+				font-size: 8px;
+				font-weight: 900;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+	}
+	&.list-angle-double{				
+		li{
+			&:before{
+				content: "\f101";
+				font-size: 18px;
+			}
+		}
+	}
+	&.list-square{
+		li{
+			&:before{
+				content: "\f45c";
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+	}
+	&.grid-2{
+		display: flex;
+		flex-wrap: wrap;
+		li{
+			width: 50%;
+		}
+		@include respond('phone'){
+			li{
+				width: 100%;
+			}
+		}
+	}
+}
+.list-square-check{
+	li{
+		padding: 10px 15px 10px 60px;
+		min-height: 45px;
+		font-weight: 600;
+		color: var(--title);    
+		margin-bottom: 15px;
+	
+		&:before{
+			content: "\f00c";
+			top: 50%;
+			height: 45px;
+			width: 45px;
+			line-height: 45px;
+			background-color: var(--rgba-primary-1);
+			color: #000;
+			text-align: center;
+			padding: 0 0 0 0;
+			@include transitionSlow;
+			transform: translateY(-50%);
+		}
+		&:hover{
+			&:before{
+				background-color: var(--primary);
+				color: #fff;
+			}
+		}
+	}
+}

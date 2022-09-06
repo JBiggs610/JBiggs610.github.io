@@ -1,0 +1,103 @@
+.form-slide {
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
+}
+.form-head h2{
+	font-size:24px;
+}
+.search-car {
+    background-color: #fff;
+	padding:30px;
+	border-radius:var(--border-radius-base);
+    max-width: 380px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+	backdrop-filter: blur(5px);
+	.nav-tabs.style-1{
+		display:flex;
+		li{
+			width:50%;
+			text-align: center;
+		}
+	}
+	@include respond ('phone'){
+		padding:15px;
+	}
+}
+
+.check-nav{
+	justify-content:center;
+	label {
+		color: #000;
+	}
+	&>li{
+		margin: 0px 15px;
+	}
+} 
+.no-of-item {
+    padding: 30px!important;
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+	@include respond ('tab-port'){
+		padding: 20px!important;
+	}
+}
+.no-of-item-dtl {
+    text-align: right;
+	h2 {
+		font-size: 115px;
+		color: #000;
+		opacity: .2;
+		font-weight: 700;
+		line-height: 115px;
+		margin: 0;
+	}
+	h3 {
+		font-size: 26px;
+		color: #000;
+		font-weight: 500;
+	}
+	@include respond ('tab-land'){
+		h2{
+			font-size:90px;
+		}
+		h3{
+			font-size:22px;
+		}
+	}
+	@include respond ('phone'){
+		text-align:center;
+	}
+}
+
+.dlab-new-item{
+	 .dlab-info {
+		background-color: rgba(255,255,255,.5);
+		padding: 16px 20px;
+		transition: all .5s ease 0s;
+		p {
+			margin: 0;
+			color: #636363;
+		}
+		.dlab-title {
+			font-weight: 600;
+			text-transform: uppercase;
+			margin: 10px 0 0;
+			font-size:18px;
+			@include respond ('tab-port'){
+				font-size:15px;
+			}
+		}
+	}
+	&:hover{
+		.dlab-info{
+			background-color:var(--primary);
+			.dlab-title a,
+			p{
+				color:#fff;
+			}
+		}
+	}
+}
+

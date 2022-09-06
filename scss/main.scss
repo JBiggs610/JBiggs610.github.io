@@ -1,0 +1,23 @@
+/*
+    Name: Mobhil 
+    Author: Dexignlabs
+    Portfolio : https://themeforest.net/user/dexignlabs/portfolio
+   
+    Table of Content: 
+
+    1. Abstract
+    2. Bootstrap CSS
+    3. Base
+    4. Layout
+    5. Component
+    7. Pages
+    
+*/
+@import url("./../vendor/animate/animate.min.css");
+
+@import "./abstract/abstract";
+@import "./../vendor/bootstrap/scss/bootstrap.scss";
+@import "./base/base";
+@import "./components/components";
+@import "./pages/pages";
+@import "./layout/layout";

@@ -1,0 +1,76 @@
+.main-slider {
+    position: relative;
+}
+
+.car-searching {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+	.section-head.style-1 {
+		margin-bottom: 0;
+		.title-sm,.h3 {
+			color: #fff;
+		}
+	}
+	@include respond ('tab-port'){
+		position:relative;
+		padding-top:30px;
+		.section-head.style-1 {
+			.title-sm,.h3 {
+				color: #000;
+			}
+		}
+	}
+}
+.search-row {
+	display: flex;
+    align-items: flex-end;
+	label{
+		text-transform:uppercase;
+		margin-bottom:10px;
+	}
+	.form-group,
+	.input-group {
+		margin-bottom: 30px;
+	}
+}
+
+.searching-form {
+    background: rgba(0,0,0,.6);
+    padding: 50px 0 20px;
+}
+
+.sep-line {
+    width: 40px;
+    height: 3px;
+    background: #d81517;
+    margin-top: 35px;
+}
+
+.about-sc{
+	blockquote {
+		padding: 15px 20px 15px 44px;
+		margin: 0;
+		background: 0 0;
+		color: #fff;
+		font-size: 18px;
+		font-style: italic;
+		font-weight: 400;
+	}
+}
+
+.about-des{
+	.icon-bx-wraper p {
+		color: #999;
+		font-size: 14px;
+		line-height: 19px;
+	}
+	.dlab-tilte {
+		color: #fff;
+		font-size: 22px;
+	}
+}
+
+.text-gray-dark {
+    color: #999;
+}

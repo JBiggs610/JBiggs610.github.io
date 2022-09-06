@@ -1,0 +1,226 @@
+.portfolio-area2{
+    &:after,
+    &:before{
+		content: "";
+		position: absolute;
+		z-index: -1;
+		background: #fff;
+		bottom: 0;
+	}
+    &:after {
+		height: 40%;
+		left: 0;
+		width: 100%;
+	}
+	&:before {
+		height: 100%;
+		right: 0;
+		width: 15%;
+	}
+	.setResizeMargin{
+		padding-right: 80px;
+	}
+	@include respond('wide-desktop'){
+		.setResizeMargin{
+			padding-right: 40px;
+		}
+		&:before {
+			width: 10%;
+		}
+	}
+	@include respond('laptop'){
+		&:before {
+			content: none;
+		}
+	}
+	@include respond('tab-land'){
+		.setResizeMargin {
+			padding-left: 40px;
+		}	
+	}
+	@include respond('tab-port'){
+		.setResizeMargin {
+			padding-right: 30px;
+			padding-left: 30px;
+		}		
+	}
+	@include respond('phone'){
+		.setResizeMargin {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+}
+.dlab-box.style-2{
+	@include transitionMedium;
+	overflow: hidden;
+	padding-bottom: 90px;
+		
+	.dlab-media{
+		img{
+			@include respond('phone-land'){
+				min-height: 350px;
+			}
+		}
+	}
+	
+	.dlab-info{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		padding: 30px;
+		background: rgba(33,37,41,0);
+		@include transitionMedium;
+	}
+	.sub-title{
+		writing-mode: tb-rl;
+		float: right;
+		margin: 0;
+		color: #fff;
+		background: var(--primary);
+		font-weight: 300;
+		position: absolute;
+		top: 0;
+		padding: 40px 25px;
+		left: 0;
+		
+		@include transitionMedium;
+		a{
+			color:inherit;	
+		}
+		@include respond('tab-land'){
+			padding: 20px 12px;
+			font-size: 15px;
+		}
+	}
+	.title{
+		margin: 0;
+		font-size:30px;
+		@include transitionMedium;
+		span{
+			display:block;
+		}
+	}
+	.port-info{
+		position:absolute;
+		bottom:10px;
+		right: 200px;
+		background:#fff;
+		padding:50px;
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);	
+		max-width: 450px;
+		width: 100%;
+	
+		@include respond('tab-land'){
+			padding:30px;
+			.dlab-meta {
+				margin-bottom: 5px;
+				ul li{
+					font-size: 15px;
+				}
+			}	
+			h2.title{
+				font-size:24px;
+			}
+		}
+		@include respond('tab-port'){
+			right: 30px;
+			max-width: 350px;
+		}
+		@include respond('phone-land'){
+			h2.title{
+				font-size:20px;
+			}
+		}
+		@include respond('phone'){
+			padding: 20px;
+			right: 15px;
+			max-width: 90%;
+		}
+	}
+	.dlab-meta{
+		ul{
+			li{
+				color:var(--primary);
+				font-size: 18px;
+				padding-left: 15px;
+				position: relative;
+				
+				&:after {
+					content: "";
+					height: 8px;
+					width: 8px;
+					background: var(--primary);
+					position: absolute;
+					border-radius: 4px;
+					left: 0;
+					top: 50%;
+					margin-top: -4px;
+				}
+			}
+		}
+	}
+	.view-btn{
+		width: 75px;
+		height: 75px;
+		position: absolute;
+		top: 30px;
+		right: 30px;
+		border-radius: var(--border-radius-base);
+		z-index: 1;
+		transition: background 0.5s ease;
+		-moz-transition: background 0.5s ease;
+		-webkit-transition: background 0.5s ease;
+		-ms-transition: background 0.5s ease;
+		-o-transition: background 0.5s ease;
+		transition-delay: 0.5s;
+		-moz-transition-delay: 0.5s;
+		-ms-transition-delay: 0.5s;
+		-o-transition-delay: 0.5s;
+		-webkit-transition-delay: 0.5s;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&:after{
+			content:"\f00e";
+			@include transitionMedium;
+			opacity:0;
+			font-family: 'Line Awesome Free';
+			font-weight: 900;
+			color: #fff;
+			font-size: 35px;
+			display: inline-block;
+			transform: scale(2);
+			-moz-transform: scale(2);
+			-webkit-transform: scale(2);
+			-ms-transform: scale(2);
+			-o-transform: scale(2);
+		}
+		@include respond('phone-land'){
+			width: 50px;
+			height: 50px;
+			top: 15px;
+			right: 15px;
+			&:after{
+				font-size: 25px;
+			}
+		}
+	}
+	&:hover{
+		.view-btn{
+			background: var(--primary);
+			//transition: background 0.8s ease;
+			transition-delay: 0s;
+			&:after{
+				opacity:1;
+				transform: scale(1);
+				-moz-transform: scale(1);
+				-webkit-transform: scale(1);
+				-ms-transform: scale(1);
+				-o-transform: scale(1);
+			}
+		}
+	}
+}

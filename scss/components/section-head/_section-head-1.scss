@@ -1,0 +1,52 @@
+// Section Head
+.section-head{
+	&.style-1{
+		h2{
+			font-size: 2.8125rem;
+			
+			span{
+				color:var(--primary);	
+			}
+			@include respond('tab-land'){
+				font-size: 2.25rem;
+			}
+			@include respond('phone-land'){
+				font-size: 1.875rem;
+			}
+		}
+		.sub-title{
+			&:before,
+			&:after{
+				content: "\f111";
+				font-weight: 900;
+				font-family: "Font Awesome 5 Free";
+				transform: scale(0.5);
+				-moz-transform: scale(0.5);
+				-webkit-transform: scale(0.5);
+				-ms-transform: scale(0.5);
+				-o-transform: scale(0.5);
+				display: inline-block;
+			}
+			&:before{
+				transform-origin:left;
+				-moz-transform-origin:left;
+				-webkit-transform-origin:left;
+				-ms-transform-origin:left;
+				-o-transform-origin:left;
+			}
+			&:after{
+				content:none;
+				transform-origin:right;
+				-moz-transform-origin:right;
+				-webkit-transform-origin:right;
+				-ms-transform-origin:right;
+				-o-transform-origin:right;
+			}
+		}
+		&.text-center .sub-title{
+			&:after{
+				content: "\f111";
+			}
+		}
+	}
+}
